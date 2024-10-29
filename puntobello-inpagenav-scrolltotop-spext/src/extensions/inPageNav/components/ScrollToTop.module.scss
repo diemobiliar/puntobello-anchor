@@ -1,0 +1,85 @@
+@import '../scss/mixins';
+@import '../scss/variables';
+
+$wide-mq: ($container-width + 2 * $container-gutter);
+
+.scrollToTop {
+  position: fixed;
+  z-index: 5;
+  bottom: 20%;
+  right: 1rem;
+
+  body, p, h1, h2, h3, h4, h5, h6, li, a, span, div {
+    font-family: var(--spfx_font_family) !important;
+  }
+
+
+  @include mq($wide-mq) {
+    right: 50%;
+    margin-right: calc(($container-width + $container-gutter) / -2);
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--spfx_widget_background_color);
+    color: var(--spfx_color_text);
+    text-decoration: none;
+    box-shadow: var(--spfx_box_shadow);
+    transition: box-shadow;
+
+    &::after {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      border: 1px solid transparent;
+      pointer-events: none;
+      transition: border-color 0.15s ease;
+    }
+
+    &:hover {
+      box-shadow: var(--spfx_box_shadow);
+
+      &::after {
+        border-color: var(--spfx_color_primary);
+      }
+    }
+
+    &:active {
+      color: var(--spfx_color_primary);
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3em;
+    height: 1.3em;
+
+    svg {
+      margin-top: -2px;
+      transition: color 0.15s ease;
+    }
+  }
+
+  .label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+}

@@ -1,0 +1,164 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+@import "../../../scss/mixins.scss";
+
+.anchorNavNumeric {
+  body, p, h1, h2, h3, h4, h5, h6, li, a, span, div {
+    font-family: var(--spfx_font_family) !important;
+  }
+
+  .nrow {
+    @include row;
+    flex-direction: column;
+  }
+
+  .nanchorNavNumericOrderedList {
+    list-style: none;
+    counter-reset: ordered-list-style-counter;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nlistitem {
+    counter-increment: ordered-list-style-counter;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+
+    @media (min-width: 600px) {
+      align-items: center;
+    }
+
+    &::after {
+      content: "";
+      background-color: var(--spfx_color_text);
+      position: absolute;
+      bottom: 0;
+      top: 35px;
+      left: 11px;
+      width: 2px;
+      height: 25px;
+    }
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nitemLink {
+    display: flex;
+    padding: 12px 0;
+    width: 100%;
+    text-decoration: none;
+    color: var(--spfx_color_text);
+    transition: 0.15s background-color ease;
+
+    &::before {
+      content: counter(ordered-list-style-counter);
+      font-size: var(--spfx_font_size_generic);
+      border: 1px solid var(--spfx_color_text);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: inline-block;
+      line-height: 22px;
+      text-align: center;
+      margin-right: 8px;
+      flex: 0 0 auto;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--spfx_color_primary);
+      text-decoration: none;
+      &::before {
+        border-color: var(--spfx_color_primary);
+      }
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  .nitemCell {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  .nitemContent {
+    font-size: var(--spfx_font_size_generic);
+  }
+}
+
+.puntoBelloPageAnchors {
+  body, p, h1, h2, h3, h4, h5, h6, li, a, span, div {
+    font-family: var(--spfx_font_family) !important;
+  }
+
+  margin-top: 10px;
+
+  .row {
+    @include row;
+    margin: -15px -10px;
+  }
+
+  .column {
+    @include column-base;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: auto;
+  }
+
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .itemLink {
+    display: block;
+    text-decoration: none;
+    color: var(--spfx_color_text);
+    transition: 0.15s background-color ease;
+    border: 1px solid var(--spfx_color_text);
+    border-radius: var(spfx_border_radius);
+
+    &:hover,
+    &:focus {
+      color: var(--spfx_color_primary);
+      border-color: var(--spfx_color_primary);
+      text-decoration: none;
+
+      .chevronIcon {
+        color: var(--spfx_color_primary);
+      }
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  .itemCell {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 4px 17px 7px 22px;
+  }
+
+  .itemContent {
+    flex-grow: 1;
+    font-size: var(--spfx_font_size_generic);
+  }
+
+  .chevronIcon {
+    margin-right: 10px;
+    color: var(--spfx_color_text);
+    font-size: var(--spfx_font_size_icon);
+    flex-shrink: 0;
+  }
+}

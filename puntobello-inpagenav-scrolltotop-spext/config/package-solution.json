@@ -1,0 +1,31 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "puntobello-inpagenav-scrolltotop-spext",
+        "id": "a9d1d7fb-5f9c-423e-b20c-54fe5f6c80a1",
+        "version": "1.0.0.0",
+        "includeClientSideAssets": true,
+        "isDomainIsolated": false,
+        "developer": {
+            "name": "Nello D'Andrea - Die Mobiliar",
+            "websiteUrl": "https://github.com/diemobiliar",
+            "privacyUrl": "https://github.com/diemobiliar",
+            "termsOfUseUrl": "https://github.com/diemobiliar",
+            "mpnId": "Undefined-1.18.2"
+        },
+        "metadata": {
+            "shortDescription": {
+                "default": "puntobello-inpagenav-scrolltotop-spext"
+            },
+            "longDescription": {
+                "default": "puntobello-inpagenav-scrolltotop-spext application customizer to read anchors in the page, renders a navigation and enable a scroll to top button"
+            },
+            "screenshotPaths": [],
+            "videoUrl": "",
+            "categories": []
+        }
+    },
+    "paths": {
+        "zippedPackage": "solution/puntobello-inpagenav-scrolltotop-spext.sppkg"
+    }
+}

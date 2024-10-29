@@ -1,0 +1,35 @@
+{
+    "sites": [
+        {
+            "Url": "pb_home",
+            "Title": "Intranet Home Page",
+            "LCID": 1033,
+            "solutions": [
+                {
+                    "Name": "puntobello-inpagenav-anchors-spwp"
+                },
+                {
+                    "Name": "puntobello-inpagenav-scrolltotop-spext",
+                    "applicationCustomizer": true
+                }
+            ],
+            "templates": []
+        },
+        {
+            "Url": "pb_content",
+            "Title": "Intranet Content Page",
+            "LCID": 1033,
+            "solutions": [
+                {
+                    "Name": "puntobello-inpagenav-anchors-spwp"
+                },
+                {
+                    "Name": "puntobello-inpagenav-scrolltotop-spext",
+                    "applicationCustomizer": true
+                }
+            ],
+            "templates": []
+        }
+    ],
+    "termStore": []
+}

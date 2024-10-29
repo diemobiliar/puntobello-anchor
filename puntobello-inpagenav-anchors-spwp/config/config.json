@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "redn-page-anchorsreader-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/inPageNav/InPageNavWebPart.js",
+          "manifest": "./src/webparts/inPageNav/InPageNavWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "InPageNavWebPartStrings": "lib/webparts/inPageNav/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

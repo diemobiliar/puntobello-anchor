@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "puntobello-inpagenav-anchors-spwp",
+    "id": "429c7f06-9c47-4a57-ae9f-770e5078ecea",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Nello D'Andrea - Die Mobiliar",
+      "websiteUrl": "https://github.com/diemobiliar",
+      "privacyUrl": "https://github.com/diemobiliar",
+      "termsOfUseUrl": "https://github.com/diemobiliar",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "puntobello-inpagenav-anchors-spwp"
+      },
+      "longDescription": {
+        "default": "puntobello-inpagenav-anchors-spwp webpart to read anchors in the page and renders a navigation"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    }
+  },
+  "paths": {
+    "zippedPackage": "solution/puntobello-inpagenav-anchors-spwp.sppkg"
+  }
+}

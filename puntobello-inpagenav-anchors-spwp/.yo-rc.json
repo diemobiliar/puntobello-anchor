@@ -1,0 +1,17 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.18.2",
+    "nodeVersion": "18.19.1",
+    "libraryName": "puntobello-inpagenave-anchors-spwp",
+    "libraryId": "429c7f06-9c47-4a57-ae9f-770e5078ecea",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "webpart",
+    "sdkVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    }
+  }
+}

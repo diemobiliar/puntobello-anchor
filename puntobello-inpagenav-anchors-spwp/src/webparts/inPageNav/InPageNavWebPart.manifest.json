@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "69abf377-77b4-4042-9039-bd1f42a14d64",
+  "alias": "InPageNavWebPart",
+  "componentType": "WebPart",
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": [
+    "SharePointWebPart"
+  ],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+      "group": {
+        "default": "Other"
+      },
+      "title": {
+        "default": "In Page Navigation Webpart"
+      },
+      "description": {
+        "default": "PuntoBello In Page Navigation Webpart enabling to navigate to different tags of the page"
+      },
+      "properties": {
+        "description": "PuntoBello In Page Navigation Webpart enabling to navigate to different tags of the page",
+        "processH2": false
+      },
+      "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAYAAABgrToAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGRSURBVFhH7ZexagJBEIZ9qJSmioWFhQiChQrCoSSYiCAiFhaCIgimSGOVIkU6n8CHyCNt+A8mbNbd2blbDw/c4hB1Z+fbf2b+1crP96Mq81MpMxzYImBohaKChSrYng3Vw2hqffDdatNR588nqwvM11029m3VV6dj3esgbIk5QAKvvkzUYd+6SMQB6ofe7tospAjw+N78twlUAxQdAJCmGgSIV7PM2C9ZDv4U5pTMBagn7C2SNBFKpn/OAdI6gjRj9X2CAaEGAKFmVkBX7H0BosmhIEqdVUEqMdzAZUdBJcaw1F7HKaA5jVwPfn000p5FXGP67LQq711MU2pOMd4DANNLSUwFJDYDBV0+SvuJFHSZNQ2HLYkEEAf0QeYChLIokalslh7UfRRlLqQHuXtW4oOIpx623Ua5e1DyA0AK6FsnKjFXShesLzHF0TS7rOamgBgucgJYj+2wNwEEDBQjONPkr3rV+UrMWRRnU5l8MKQHbYCYXKjmmlyxgpJpLXpN/NMUqnBUMCoYqkBofOl78Bd/0vWnxeVdeAAAAABJRU5ErkJggg=="
+    }
+  ]
+}

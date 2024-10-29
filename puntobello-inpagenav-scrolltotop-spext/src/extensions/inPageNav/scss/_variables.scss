@@ -1,0 +1,6 @@
+// Variables used in calculations must be defined directly in the file
+$container-width: 1236px;
+$container-gutter: 16px;
+$right-position: 80px;
+$bottom-position: 20%;
+$wide-mq: ($container-width + 2 * $container-gutter);
