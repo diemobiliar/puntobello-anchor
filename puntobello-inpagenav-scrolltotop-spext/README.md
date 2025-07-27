@@ -32,8 +32,8 @@ You can configure all parameters in the corresponding files located in the `env`
 ---
 
 ## Compatibility
-![SPFx 1.18.2](https://img.shields.io/badge/SPFx-1.18.2-green.svg)  
-![Node.js v18.19.1](https://img.shields.io/badge/Node.js-%20v18.19.1-green.svg)  
+![SPFx 1.21.0](https://img.shields.io/badge/SPFx-1.21.0-green.svg)
+![Node.js v18.19.1](https://img.shields.io/badge/Node.js-%20v18.19.1-green.svg)
 ![SharePoint Online](https://img.shields.io/badge/SharePoint-Online-green.svg)  
 ![Teams N/A: Untested with Microsoft Teams](https://img.shields.io/badge/Teams-N%2FA-lightgrey.svg "Untested with Microsoft Teams")  
 ![Local Workbench](https://img.shields.io/badge/Workbench-Local-red.svg)  
@@ -49,6 +49,7 @@ You can configure all parameters in the corresponding files located in the `env`
 
 | Version | Date          | Comments       |
 |---------|---------------|----------------|
+1.1.0   | July 2025 | Upgraded with Pantoum SPFx AI Upgrader
 | 1.0.0   | October 2024  | Initial release|
 
 ## License
