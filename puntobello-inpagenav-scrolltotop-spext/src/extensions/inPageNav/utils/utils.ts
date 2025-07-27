@@ -48,7 +48,7 @@ export class Utility {
     try {
       const translatedString = require(`../loc/${locale}.js`);
       return translatedString[stringName];
-    } catch (error) {
+    } catch {
       try {
         const defaultString = require(`../loc/default.js`);
         return defaultString[stringName];

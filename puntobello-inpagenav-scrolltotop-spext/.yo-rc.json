@@ -1,6 +1,6 @@
 {
   "@microsoft/generator-sharepoint": {
-    "version": "1.18.2",
+    "version": "1.21.0",
     "libraryName": "puntobello-inpagenav-scrolltotop-spexts",
     "libraryId": "a9d1d7fb-5F9C-423E-b20c-54fe5f6c80a1",
     "environment": "spo",
@@ -11,7 +11,7 @@
     "extensionType": "ApplicationCustomizer",
     "nodeVersion": "18.19.1",
     "sdkVersions": {
-      "@microsoft/teams-js": "2.12.0",
+      "@microsoft/teams-js": "2.24.0",
       "@microsoft/microsoft-graph-client": "3.0.2"
     }
   }
