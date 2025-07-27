@@ -3,7 +3,7 @@
     "isCreatingSolution": true,
     "environment": "spo",
     "version": "1.21.0",
-    "nodeVersion": "18.19.1",
+    "nodeVersion": "22.15.0",
     "libraryName": "puntobello-inpagenave-anchors-spwp",
     "libraryId": "429c7f06-9c47-4a57-ae9f-770e5078ecea",
     "packageManager": "npm",
