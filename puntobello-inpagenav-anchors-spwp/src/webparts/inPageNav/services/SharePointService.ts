@@ -81,6 +81,14 @@ export default class SharePointService {
         // Filter headings based on props to maintain natural order
         const filteredHeadings = headings.filter(heading => {
             const tagName = heading.tagName.toLowerCase();
+            const className = heading.getAttribute('class') || '';
+
+            // Exclude web part titles that have the lineHeight1_4 class
+            // Web part titles typically have: "headingSpacingAbove headingSpacingBelow lineHeight1_4"
+            if (className.includes('lineHeight1_4')) {
+                return false;
+            }
+
             return (tagName === 'h2' && props.processH2) ||
                    (tagName === 'h3' && props.processH3) ||
                    (tagName === 'h4' && props.processH4);
