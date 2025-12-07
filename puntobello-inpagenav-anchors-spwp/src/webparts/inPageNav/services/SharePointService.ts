@@ -123,6 +123,12 @@ export default class SharePointService {
     
         for (const heading of headings) {
             const cleanAnchorTag = heading.textContent || '';
+
+            // Skip headings with no meaningful content (empty or whitespace only)
+            if (!cleanAnchorTag.trim()) {
+                continue;
+            }
+
             const tagID = this.getAnchorID(cleanAnchorTag);
             const finalAnchorTag = this.stripAlphaNumericOrdering(cleanAnchorTag);
             const tagName = heading.tagName.toLowerCase();
