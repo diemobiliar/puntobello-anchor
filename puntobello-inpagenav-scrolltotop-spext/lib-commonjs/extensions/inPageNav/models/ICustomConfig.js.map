@@ -1,0 +1,1 @@
+{"version":3,"file":"ICustomConfig.js","sourceRoot":"","sources":["../../../../src/extensions/inPageNav/models/ICustomConfig.ts"],"names":[],"mappings":"","sourcesContent":["/* eslint-disable @typescript-eslint/no-empty-interface */\nexport interface ICustomConfig {}\n"]}

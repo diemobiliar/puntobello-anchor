@@ -24,7 +24,7 @@ export default class ScrollToTopApplicationCustomizer extends BaseApplicationCus
     // Placeholder reference for the bottom area of the page
     private _bottomPlaceholder: PlaceholderContent | undefined;
     // Logger instance to track and log events and errors
-    private logger: Logger;
+    private logger!: Logger;
 
     // Initialization method for the customizer
     public async onInit(): Promise<void> {
@@ -76,5 +76,13 @@ export default class ScrollToTopApplicationCustomizer extends BaseApplicationCus
             // Render the ScrollToTop component into the bottom placeholder's DOM element
             ReactDom.render(element, this._bottomPlaceholder.domElement);
         }
+    }
+
+    // Cleanup method to unmount React components and prevent memory leaks
+    protected onDispose(): void {
+        if (this._bottomPlaceholder?.domElement) {
+            ReactDom.unmountComponentAtNode(this._bottomPlaceholder.domElement);
+        }
+        super.onDispose();
     }
 }

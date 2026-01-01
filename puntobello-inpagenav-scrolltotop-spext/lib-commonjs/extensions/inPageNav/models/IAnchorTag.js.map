@@ -1,0 +1,1 @@
+{"version":3,"file":"IAnchorTag.js","sourceRoot":"","sources":["../../../../src/extensions/inPageNav/models/IAnchorTag.ts"],"names":[],"mappings":"","sourcesContent":["export interface IAnchorTag {\n  TagUrl: string;\n  TagValue: string;\n  TagIcon: string;\n}\n"]}

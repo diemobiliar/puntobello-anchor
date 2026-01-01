@@ -1,0 +1,1 @@
+{"version":3,"file":"IRootEnv.js","sourceRoot":"","sources":["../../../../src/webparts/inPageNav/models/IRootEnv.ts"],"names":[],"mappings":"","sourcesContent":["import { ICustomCSS, ICustomConfig } from \".\";\n\nexport interface IRootEnv {\n    css: ICustomCSS;\n    config: ICustomConfig;\n}\n"]}

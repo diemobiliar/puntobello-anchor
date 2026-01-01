@@ -117,11 +117,12 @@ export function Anchors(props: IAnchorTagProps) {
       )
       :
       // Display placeholder in Edit mode if no anchor tags are found
-      props.displayMode === DisplayMode.Edit &&
+      (props.displayMode === DisplayMode.Edit ?
       <Placeholder
         iconName='Edit'
         iconText={strings.NoAnchorsFound}
         description={strings.NoAnchorsFoundDescription}
       />
+      : null)
   );
 }

@@ -42,8 +42,8 @@ export interface IInPageNavWebPartProps {
  * InPageNavWebPart class manages the configuration, rendering, and theming for the in-page navigation web part.
  */
 export default class InPageNavWebPart extends BaseClientSideWebPart<IInPageNavWebPartProps> {
-    private logger: Logger;
-    private themeProvider: ThemeProvider;
+    private logger!: Logger;
+    private themeProvider!: ThemeProvider;
     private themeVariant: IReadonlyTheme | undefined;
     private initialized: boolean = false;
   
@@ -144,6 +144,7 @@ export default class InPageNavWebPart extends BaseClientSideWebPart<IInPageNavWe
         if (value === undefined || value.length === 0) {
             return strings.UIIconEmptyValue;
         }
+        return '';
     }
 
     /**

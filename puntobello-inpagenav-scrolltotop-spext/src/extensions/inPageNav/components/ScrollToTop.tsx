@@ -35,7 +35,7 @@ export function ScrollToTop() {
   const [isVisible, { setTrue: setVisible, setFalse: setInvisible }] = useBoolean(false);
 
   // State for storing configuration and anchor tags data
-  const [configuration, setConfiguration] = React.useState<IAnchorTagProps>(null);
+  const [configuration, setConfiguration] = React.useState<IAnchorTagProps | null>(null);
   const [anchorTags, setAnchorTags] = React.useState<IAnchorTag[]>([]);
 
   // Reference to the scroll region element

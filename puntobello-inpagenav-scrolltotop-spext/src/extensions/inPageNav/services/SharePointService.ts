@@ -31,16 +31,16 @@ export class SharePointService {
     public static readonly serviceKey: ServiceKey<ISharePointService> =
         ServiceKey.create<ISharePointService>('SPFx:SharePointService', SharePointService);
 
-    private sp: SPFI;
-    private serverRelativeUrl: string;
-    private absoluteUrl: string;
+    private sp!: SPFI;
+    private serverRelativeUrl!: string;
+    private absoluteUrl!: string;
 
-    private listId: string;
-    private listItemId: number;
-    private pageContext: PageContext;
+    private listId!: string;
+    private listItemId!: number;
+    private pageContext!: PageContext;
     private pageContent: any;
-    private logger: Logger;
-    private rootEnv: IRootEnv;
+    private logger!: Logger;
+    private rootEnv!: IRootEnv;
     private isInitialized = false;
     private initializationPromise: Promise<void>;
 
@@ -57,8 +57,8 @@ export class SharePointService {
                     this.pageContext = serviceScope.consume(PageContext.serviceKey);
                     this.serverRelativeUrl = this.pageContext.web.serverRelativeUrl;
                     this.absoluteUrl = this.pageContext.site.absoluteUrl;
-                    this.listId = this.pageContext.list.id.toString();
-                    this.listItemId = this.pageContext.listItem.id;
+                    this.listId = this.pageContext.list?.id?.toString() ?? '';
+                    this.listItemId = this.pageContext.listItem?.id ?? 0;
 
                     this.sp = spfi().using(SPFx({ pageContext: this.pageContext }));
                     this.pageContent = await this.sp.web.lists.getById(this.listId).items.getById(this.listItemId)
@@ -206,11 +206,11 @@ export class SharePointService {
             let iconValue = '';
             if (!props.toggleNumericLayout) {
                 if (tagName === 'h2') {
-                    iconValue = props.iconH2;
+                    iconValue = props.iconH2 ?? '';
                 } else if (tagName === 'h3') {
-                    iconValue = props.iconH3;
+                    iconValue = props.iconH3 ?? '';
                 } else if (tagName === 'h4') {
-                    iconValue = props.iconH4;
+                    iconValue = props.iconH4 ?? '';
                 }
             }
 
