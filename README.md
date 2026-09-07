@@ -109,15 +109,15 @@ This builds the container and attaches the project folder to the container with 
 3. Sites, Lists and Solutions are ready to use.
 
 #### Connect the solution to SPO
-If you want to test or debug a solution without deploying it in the app catalog, you can use gulp serve in the Dev Container.
+If you want to test or debug a solution without deploying it in the app catalog, you can use heft start in the Dev Container.
 
 > 📝 **NOTE:**
 > The Dev container has configured the two default ports 4321 and 35729 for forwarding. If the configuration is different, corresponding parameters must be adjusted in the solutions as well as in the devcontainer.json.
 
-1. Trust the dev certificate: `gulp trust-dev-cert`
+1. Trust the dev certificate: `heft trust-dev-cert`
 2. Change to the directory of the solution e.g. `cd ./puntobello-inpagenav-anchors-spwp`.
 3. Set the page urls in config/serve.json.
-4. Start serving: `gulp serve`
+4. Start serving: `npm run start:dev` (or `npm run start:prod`).
 5. Open the configured workbench url to test or debugging the solution.
 
 ### <a id="install_docker"></a>Use commands in docker container locally

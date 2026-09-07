@@ -31,14 +31,14 @@ export default class SharePointService {
     public static readonly serviceKey: ServiceKey<ISharePointService> =
         ServiceKey.create<ISharePointService>('SPFx:SharePointService', SharePointService);
 
-    private sp: SPFI;
-    private serverRelativeUrl: string;
-    private absoluteUrl: string;
-    private listId: string;
-    private listItemId: number;
-    private pageContext: PageContext;
+    private sp!: SPFI;
+    private serverRelativeUrl!: string;
+    private absoluteUrl!: string;
+    private listId!: string;
+    private listItemId!: number;
+    private pageContext!: PageContext;
     private logger: Logger;
-    private rootEnv: IRootEnv;
+    private rootEnv!: IRootEnv;
 
     /**
      * Initializes the SharePoint service and retrieves page context.
@@ -52,8 +52,8 @@ export default class SharePointService {
             this.pageContext = serviceScope.consume(PageContext.serviceKey);
             this.serverRelativeUrl = this.pageContext.web.serverRelativeUrl;
             this.absoluteUrl = this.pageContext.site.absoluteUrl;
-            this.listId = this.pageContext.list.id.toString();
-            this.listItemId = this.pageContext.listItem.id;
+            this.listId = this.pageContext.list!.id.toString();
+            this.listItemId = this.pageContext.listItem!.id;
             this.sp = spfi().using(SPFx({ pageContext: this.pageContext }));
         });
     }

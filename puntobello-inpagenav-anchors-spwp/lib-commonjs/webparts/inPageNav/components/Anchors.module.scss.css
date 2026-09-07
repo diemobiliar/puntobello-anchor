@@ -1,0 +1,149 @@
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at http://aka.ms/fabric-assets-license
+*/
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at http://aka.ms/fabric-assets-license
+*/
+.anchorNavNumeric body, .anchorNavNumeric p, .anchorNavNumeric h1, .anchorNavNumeric h2, .anchorNavNumeric h3, .anchorNavNumeric h4, .anchorNavNumeric h5, .anchorNavNumeric h6, .anchorNavNumeric li, .anchorNavNumeric a, .anchorNavNumeric span, .anchorNavNumeric div {
+  font-family: var(--spfx_font_family) !important;
+}
+.anchorNavNumeric .nrow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  flex-direction: column;
+}
+.anchorNavNumeric .nanchorNavNumericOrderedList {
+  list-style: none;
+  counter-reset: ordered-list-style-counter;
+  margin: 0;
+  padding: 0;
+}
+.anchorNavNumeric .nlistitem {
+  counter-increment: ordered-list-style-counter;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+@media (min-width: 600px) {
+  .anchorNavNumeric .nlistitem {
+    align-items: center;
+  }
+}
+.anchorNavNumeric .nlistitem::after {
+  content: "";
+  background-color: var(--spfx_color_text);
+  position: absolute;
+  bottom: 0;
+  top: 35px;
+  left: 11px;
+  width: 2px;
+  height: 25px;
+}
+.anchorNavNumeric .nlistitem:last-child::after {
+  content: none;
+}
+.anchorNavNumeric .item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.anchorNavNumeric .nitemLink {
+  display: flex;
+  padding: 12px 0;
+  width: 100%;
+  text-decoration: none;
+  color: var(--spfx_color_text);
+  transition: 0.15s background-color ease;
+}
+.anchorNavNumeric .nitemLink::before {
+  content: counter(ordered-list-style-counter);
+  font-size: var(--spfx_font_size_generic);
+  border: 1px solid var(--spfx_color_text);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 22px;
+  text-align: center;
+  margin-right: 8px;
+  flex: 0 0 auto;
+}
+.anchorNavNumeric .nitemLink:hover, .anchorNavNumeric .nitemLink:focus {
+  color: var(--spfx_color_primary);
+  text-decoration: none;
+}
+.anchorNavNumeric .nitemLink:hover::before, .anchorNavNumeric .nitemLink:focus::before {
+  border-color: var(--spfx_color_primary);
+}
+.anchorNavNumeric .nitemLink:active {
+  text-decoration: none;
+}
+.anchorNavNumeric .nitemCell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.anchorNavNumeric .nitemContent {
+  font-size: var(--spfx_font_size_generic);
+}
+
+.puntoBelloPageAnchors {
+  margin-top: 10px;
+}
+.puntoBelloPageAnchors body, .puntoBelloPageAnchors p, .puntoBelloPageAnchors h1, .puntoBelloPageAnchors h2, .puntoBelloPageAnchors h3, .puntoBelloPageAnchors h4, .puntoBelloPageAnchors h5, .puntoBelloPageAnchors h6, .puntoBelloPageAnchors li, .puntoBelloPageAnchors a, .puntoBelloPageAnchors span, .puntoBelloPageAnchors div {
+  font-family: var(--spfx_font_family) !important;
+}
+.puntoBelloPageAnchors .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  margin: -15px -10px;
+}
+.puntoBelloPageAnchors .column {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: auto;
+}
+.puntoBelloPageAnchors .item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.puntoBelloPageAnchors .itemLink {
+  display: block;
+  text-decoration: none;
+  color: var(--spfx_color_text);
+  transition: 0.15s background-color ease;
+  border: 1px solid var(--spfx_color_text);
+  border-radius: var(spfx_border_radius);
+}
+.puntoBelloPageAnchors .itemLink:hover, .puntoBelloPageAnchors .itemLink:focus {
+  color: var(--spfx_color_primary);
+  border-color: var(--spfx_color_primary);
+  text-decoration: none;
+}
+.puntoBelloPageAnchors .itemLink:hover .chevronIcon, .puntoBelloPageAnchors .itemLink:focus .chevronIcon {
+  color: var(--spfx_color_primary);
+}
+.puntoBelloPageAnchors .itemLink:active {
+  text-decoration: none;
+}
+.puntoBelloPageAnchors .itemCell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 4px 17px 7px 22px;
+}
+.puntoBelloPageAnchors .itemContent {
+  flex-grow: 1;
+  font-size: var(--spfx_font_size_generic);
+}
+.puntoBelloPageAnchors .chevronIcon {
+  margin-right: 10px;
+  color: var(--spfx_color_text);
+  font-size: var(--spfx_font_size_icon);
+  flex-shrink: 0;
+}

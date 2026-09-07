@@ -1,0 +1,343 @@
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at http://aka.ms/fabric-assets-license
+*/
+.anchorsWrapper body,
+.anchorsWrapper p,
+.anchorsWrapper h1,
+.anchorsWrapper h2,
+.anchorsWrapper h3,
+.anchorsWrapper h4,
+.anchorsWrapper h5,
+.anchorsWrapper h6,
+.anchorsWrapper li,
+.anchorsWrapper a,
+.anchorsWrapper span,
+.anchorsWrapper div {
+  font-family: var(--spfx_font_family) !important;
+}
+
+.anchorNavNumeric .nrow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  flex-direction: column;
+}
+.anchorNavNumeric .nanchorNavNumericOrderedList {
+  list-style: none;
+  counter-reset: ordered-list-style-counter;
+  margin: 0;
+  padding: 0;
+}
+.anchorNavNumeric .nlistitem {
+  counter-increment: ordered-list-style-counter;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  color: var(--spfx_color_text_hover);
+}
+@media (min-width: 600px) {
+  .anchorNavNumeric .nlistitem {
+    align-items: center;
+  }
+}
+.anchorNavNumeric .nlistitem::after {
+  content: "";
+  background-color: var(--spfx_color_text);
+  position: absolute;
+  bottom: 0;
+  top: 35px;
+  left: 11px;
+  width: 2px;
+  height: 100%;
+}
+.anchorNavNumeric .nlistitem:last-child::after {
+  content: none;
+}
+.anchorNavNumeric .item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.anchorNavNumeric .nitemLink {
+  display: flex;
+  padding: 12px 0;
+  width: 100%;
+  text-decoration: none;
+  color: var(--spfx_color_text);
+  transition: 0.15s background-color ease;
+}
+.anchorNavNumeric .nitemLink::before {
+  content: counter(ordered-list-style-counter);
+  font-size: var(--spfx_font_size_generic);
+  border: 1px solid var(--spfx_color_text);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 22px;
+  text-align: center;
+  margin-right: 8px;
+  flex: 0 0 auto;
+  background-color: var(--spfx_widget_background_color);
+}
+.anchorNavNumeric .nitemLink:hover {
+  color: var(--spfx_color_text_hover);
+  text-decoration: none;
+}
+.anchorNavNumeric .nitemLink:hover::before {
+  border-color: var(--spfx_color_text_hover);
+}
+.anchorNavNumeric .nitemLink:active {
+  text-decoration: none;
+}
+.anchorNavNumeric .nitemCell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.anchorNavNumeric .nitemContent {
+  font-size: var(--spfx_font_size_generic);
+}
+
+.PageAnchors {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.PageAnchors .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  margin: -15px -10px;
+}
+.PageAnchors .column {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: auto;
+}
+.PageAnchors .item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.PageAnchors .itemLink {
+  display: block;
+  text-decoration: none;
+  color: var(--spfx_color_text);
+  transition: 0.15s background-color ease;
+  border: 1px solid var(--spfx_color_text);
+  border-radius: 25px;
+}
+.PageAnchors .itemLink:hover {
+  color: var(--spfx_color_text_hover);
+  border-color: var(--spfx_color_text_hover);
+  text-decoration: none;
+}
+.PageAnchors .itemLink:hover .chevronIcon {
+  color: var(--spfx_color_text_hover);
+}
+.PageAnchors .itemLink:active {
+  text-decoration: none;
+}
+.PageAnchors .itemCell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 4px 17px 7px 22px;
+}
+.PageAnchors .itemContent {
+  flex-grow: 1;
+  font-size: var(--spfx_font_size_generic);
+}
+.PageAnchors .chevronIcon {
+  margin-right: 10px;
+  color: var(--spfx_color_text);
+  font-size: var(--spfx_font_size_generic);
+  flex-shrink: 0;
+}
+
+.modalcontainer {
+  border-radius: var(--spfx_border_radius);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  box-shadow: var(--spfx_box_shadow);
+  padding: 24px 60px 30px 24px;
+  max-width: 490px;
+  position: fixed;
+  bottom: 20%;
+  right: 72px;
+  margin-bottom: -6px;
+  max-height: 60vh;
+}
+@media (max-width: 639.99999px) {
+  .modalcontainer {
+    max-width: 80vw;
+    padding: 0;
+  }
+}
+@media (min-width: 1268px) {
+  .modalcontainer {
+    right: 50%;
+    margin-right: -538px;
+  }
+}
+
+.modalbody {
+  flex: 1 1 auto;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+@media (max-width: 639.99999px) {
+  .modalbody {
+    padding: 24px 12px 72px 12px;
+  }
+}
+.modalbody p {
+  margin: 0;
+}
+
+.modalfooter .buttonModal {
+  background-color: var(--spfx_widget_background_color) !important;
+}
+
+.modalfooter {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.modalfooter .buttonModal {
+  position: fixed;
+  z-index: 1000000000000000;
+  bottom: 20%;
+  right: 80px;
+}
+@media (min-width: 1268px) {
+  .modalfooter .buttonModal {
+    right: 50%;
+    margin-right: -538px;
+  }
+}
+.modalfooter .buttonModal .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+  color: var(--spfx_color_text);
+  text-decoration: none;
+  box-shadow: var(--spfx_box_shadow);
+  background-color: var(--spfx_widget_background_color);
+  transition: box-shadow;
+}
+.modalfooter .buttonModal .link::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  pointer-events: none;
+  transition: border-color 0.15s ease;
+}
+.modalfooter .buttonModal .link:hover {
+  box-shadow: var(--spfx_box_shadow);
+}
+.modalfooter .buttonModal .link:hover::after {
+  border-color: var(--spfx_color_primary);
+}
+.modalfooter .buttonModal .link:active {
+  color: var(--spfx_color_text_hover);
+}
+.modalfooter .buttonModal .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3em;
+  height: 1.3em;
+}
+.modalfooter .buttonModal .icon svg {
+  margin-top: -2px;
+  transition: color 0.15s ease;
+}
+.modalfooter .buttonModal .label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.buttonMore {
+  position: fixed;
+  bottom: 20%;
+  right: 80px;
+}
+@media (min-width: 1268px) {
+  .buttonMore {
+    right: 50%;
+    margin-right: -538px;
+  }
+}
+.buttonMore .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--spfx_widget_background_color);
+  color: var(--spfx_color_text);
+  text-decoration: none;
+  box-shadow: var(--spfx_box_shadow);
+  transition: box-shadow;
+}
+.buttonMore .link::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  pointer-events: none;
+  transition: border-color 0.15s ease;
+}
+.buttonMore .link:hover {
+  box-shadow: var(--spfx_box_shadow);
+}
+.buttonMore .link:hover::after {
+  border-color: var(--spfx_color_text_hover);
+}
+.buttonMore .link:active {
+  color: var(--spfx_color_text_hover);
+}
+.buttonMore .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3em;
+  height: 1.3em;
+}
+.buttonMore .icon svg {
+  margin-top: -2px;
+  transition: color 0.15s ease;
+}
+.buttonMore .label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
